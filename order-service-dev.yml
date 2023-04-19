@@ -12,6 +12,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+    virtual-host: /
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
