@@ -21,4 +21,4 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8082/eureka/
 #测试信息
-test: update! the message sending by config-service-git
+test: the message sending by config-service-git
