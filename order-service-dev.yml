@@ -6,6 +6,12 @@ spring:
     username: root
     password: 200161
     driver-class-name: com.mysql.cj.jdbc.Driver
+  # rabbitmq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -22,3 +28,11 @@ eureka:
       defaultZone: http://127.0.0.1:8082/eureka/
 #测试信息
 test: the message sending by config-service-git
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+        include: bus-refresh  # 需要开启的端点
+        #exclude:             # 不需要开启的端点
